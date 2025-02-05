@@ -1,12 +1,15 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 type Props = {
-  someData: string;
+  someData: {
+    title: string;
+    text: string;
+  };
 };
 export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
-      someData: "some data",
+      someData: { title: "title", text: "text" },
     },
   };
 };
@@ -16,10 +19,13 @@ const PageComponent: React.FC<
 > = (props) => {
   console.log("props: ", props);
   const { someData } = props;
+  const { title, text } = someData;
   return (
     <>
       <h1>Page B</h1>
-      <p>With {someData}</p>
+      <p>
+        With title "{title}" and text "{text}"
+      </p>
     </>
   );
 };

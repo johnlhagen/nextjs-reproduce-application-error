@@ -3,11 +3,7 @@ const getDynamicPagesRewrites = require("./getDynamicPagesRewrites.js");
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
-    const dynamicPagesRewrites = await getDynamicPagesRewrites();
-    return [
-      ...dynamicPagesRewrites,
-      { source: "/rewrite-of-b", destination: "/b" },
-    ];
+    return [{ source: "/rewrite-of-b", destination: "/b" }];
   },
 };
 

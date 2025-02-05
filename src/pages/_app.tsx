@@ -7,9 +7,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ul style={{ textDecoration: "underline", marginBottom: "50px" }}>
         <li>
-          <Link href={"/a"}>link to the problematic page</Link>
-        </li>
-        <li>
           <Link href={"/b"} prefetch={false}>
             Direct link to /b
           </Link>
