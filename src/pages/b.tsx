@@ -17,8 +17,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const PageComponent: React.FC<
   InferGetStaticPropsType<typeof getStaticProps>
 > = (props) => {
-  // Everything works as expected
+  // THE PROBLEM: for some reason, props are empty here
   console.log("props in /b: ", props);
+  // THE PROBLEM: someData is undefined!
   const { someData } = props;
   const { title, text } = someData;
   return (
