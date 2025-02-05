@@ -46,8 +46,8 @@ const DynamicPage: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
   const { text, title } = pageData;
   return (
     <>
-      <h1>{title}</h1>
-      <p>{text}</p>
+      <h1>Title --- {title}</h1>
+      <p>Text --- {text}</p>
     </>
   );
 };
