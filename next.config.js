@@ -4,7 +4,10 @@ const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
     const dynamicPagesRewrites = await getDynamicPagesRewrites();
-    return [...dynamicPagesRewrites];
+    return [
+      ...dynamicPagesRewrites,
+      { source: "/rewrite-of-b", destination: "/b" },
+    ];
   },
 };
 
