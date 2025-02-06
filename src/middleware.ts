@@ -8,8 +8,7 @@ import { NextMiddleware, NextRequest, NextResponse } from "next/server";
 export const config = {
   matcher: [
     {
-      source:
-        "/((?!images|svgs|icons|fonts|favicon-*[32x32]*.*|[\\d\\w/.]*.css.*).*)",
+      source: "/",
     },
   ],
 };
