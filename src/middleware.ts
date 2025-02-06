@@ -10,6 +10,9 @@ export const config = {
     {
       source: "/b",
     },
+    {
+      source: "/rewrite-to-b",
+    },
   ],
 };
 
