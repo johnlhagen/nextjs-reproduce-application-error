@@ -8,7 +8,7 @@ import { NextMiddleware, NextRequest, NextResponse } from "next/server";
 export const config = {
   matcher: [
     {
-      source: "/",
+      source: "/b",
     },
   ],
 };
