@@ -17,7 +17,7 @@ const rewritesMap = [["/rewrite-to-b", "/b"]];
 
 export const middleware: NextMiddleware = (request: NextRequest) => {
   if (request.nextUrl.pathname === rewritesMap[0][0]) {
-    return NextResponse.rewrite(new URL(rewritesMap[0][1], request.url));
+    NextResponse.rewrite(new URL(rewritesMap[0][1], request.url));
   }
   return NextResponse.next();
 };
