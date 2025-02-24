@@ -19,6 +19,10 @@ const PageComponent: React.FC<
 > = (props) => {
   // THE PROBLEM: for some reason, props are empty here
   console.log("props in /b: ", props);
+  if (JSON.stringify(props) === "{}") {
+    console.log("avoiding the error");
+    window.location.reload();
+  }
   // THE PROBLEM: someData is undefined!
   const { someData } = props;
   const { title, text } = someData;
